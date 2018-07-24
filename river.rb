@@ -1,7 +1,7 @@
 class River
 
-  def initialize(name)
-    @name = name
+  def initialize(river_name)
+    @river_name = river_name
     @fish = []
   end
 
