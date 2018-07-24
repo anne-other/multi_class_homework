@@ -1,10 +1,22 @@
 require('minitest/autorun')
 require('minitest/rg')
 require_relative('../river')
+require_relative('../fish')
 
 class RiverTest < MiniTest::Test
 
-  def method_name
+  def setup()
     @river = River.new("Amazon")
+    fish = Fish.new()
+    @river.add_fish(fish)
+  end
+
+  def test_count_fish()
+    assert_equal(1, @river.count_fish())
+  end
+
+  def test_add_fish()
+    @river.add_fish(Fish.new)
+    assert_equal(2, @river.count_fish())
   end
 end
