@@ -12,4 +12,8 @@ class River
   def count_fish()
     return @fish.size()
   end
+
+  def supply_fish
+    return @fish.pop
+  end
 end
