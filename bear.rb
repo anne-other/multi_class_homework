@@ -13,4 +13,8 @@ class Bear
   def catch_fish(river)
     @stomach.push(river.supply_fish())
   end
+
+  def roar()
+    return "Roar!!"
+  end
 end
